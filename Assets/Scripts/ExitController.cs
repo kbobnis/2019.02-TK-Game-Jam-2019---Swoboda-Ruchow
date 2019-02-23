@@ -6,8 +6,7 @@ public class ExitController : MonoBehaviour
 {
     private const string PlayerTag = "Player";
 
-    [SerializeField]
-    private int partsNeededToWin = 8;
+    [SerializeField] private int partsNeededToWin = 8;
 
     private int partsIn = 0;
 
@@ -15,7 +14,10 @@ public class ExitController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag(PlayerTag)) return;
+        if (!other.CompareTag(PlayerTag))
+        {
+            return;
+        }
 
         partsIn++;
         if (partsIn >= partsNeededToWin)

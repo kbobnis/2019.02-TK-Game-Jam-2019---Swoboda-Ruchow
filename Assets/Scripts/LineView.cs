@@ -4,10 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LineView : MonoBehaviour
 {
-    [SerializeField]
-    private Transform[]  points;
+    [SerializeField] private Transform[] points;
     private LineRenderer lineRenderer;
-    private Transform    transform;
+    private Transform transform;
 
     private void Start()
     {
@@ -32,7 +31,7 @@ public class LineView : MonoBehaviour
     {
         var vertices = GetConnectionPoints();
 
-                                  lineRenderer.positionCount = vertices.Length;
+        lineRenderer.positionCount = vertices.Length;
         lineRenderer.SetPositions(vertices);
     }
 
