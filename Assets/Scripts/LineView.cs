@@ -12,19 +12,6 @@ public class LineView : MonoBehaviour
     {
         this.lineRenderer = GetComponent<LineRenderer>();
         this.transform = GetComponent<Transform>();
-
-        if (this.points.Length != 0) return;
-
-        this.points = this.transform.GetComponentsInChildren<Transform>();
-
-        Debug.Log(string.Concat(points.Select(p => p.name)));
-
-        var joints = this.transform.GetComponentsInChildren<DistanceJoint2D>();
-        var rigidBodies = this.transform.GetComponentsInChildren<Rigidbody2D>();
-        for (var i = 0; i < rigidBodies.Length - 1; i++)
-        {
-            joints[i + 1].connectedBody = rigidBodies[i];
-        }
     }
 
     private void Update()
@@ -37,6 +24,6 @@ public class LineView : MonoBehaviour
 
     private Vector3[] GetConnectionPoints()
     {
-        return this.points.Select(t => t.position).ToArray();
+        return new [] { transform }.Concat(this.points).Select(t => t.position).ToArray();
     }
 }
