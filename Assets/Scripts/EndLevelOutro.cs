@@ -18,7 +18,7 @@ namespace DefaultNamespace
         
         void Start()
         {
-            GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+            GetComponentInChildren<Canvas>(true).gameObject.SetActive(false);
         }
         
         public void EndLevel(string nextSceneName)
