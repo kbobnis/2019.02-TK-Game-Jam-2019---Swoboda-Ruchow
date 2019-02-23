@@ -23,10 +23,6 @@ namespace DefaultNamespace
         
         public void EndLevel(string nextSceneName)
         {
-            if (string.IsNullOrWhiteSpace(nextSceneName))
-            {
-                throw new Exception("There is no null or whitespace scene name");
-            }
             this.nextSceneName = nextSceneName;
             GetComponentInChildren<Canvas>(true).gameObject.SetActive(true);
             GetComponentInChildren<PlayableDirector>().Play();
@@ -34,7 +30,7 @@ namespace DefaultNamespace
         
         public void EndGame()
         {
-            
+            EndLevel(null);
         }
         
         void OnEnable()
@@ -48,7 +44,14 @@ namespace DefaultNamespace
             {
                 Debug.Log("PlayableDirector named " + aDirector.name + " is now stopped. next scene is " + this.nextSceneName);
                 GetComponentInChildren<Canvas>(true).gameObject.SetActive(false);
-                SceneManager.LoadScene(this.nextSceneName);
+
+                if (string.IsNullOrWhiteSpace(this.nextSceneName))
+                {
+                    SceneManager.LoadScene("MainMenu");
+                } else
+                {
+                    SceneManager.LoadScene(this.nextSceneName);
+                }
             }
         }
 
