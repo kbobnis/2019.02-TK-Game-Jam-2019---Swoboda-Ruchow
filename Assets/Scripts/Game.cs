@@ -19,7 +19,15 @@ namespace DefaultNamespace
 
         public void LevelFinished()
         {
-            GetComponentInChildren<EndLevelOutro>().EndLevel(levelNames[++actualLevel]);
+            EndLevelOutro outro = GetComponentInChildren<EndLevelOutro>();
+            int nextLevelIndex = ++actualLevel;
+            if (nextLevelIndex >= levelNames.Length)
+            {
+                outro.EndGame();
+            } else
+            {
+                outro.EndLevel(levelNames[actualLevel]);
+            }
         }
     }
 }

@@ -32,6 +32,11 @@ namespace DefaultNamespace
             GetComponentInChildren<PlayableDirector>().Play();
         }
         
+        public void EndGame()
+        {
+            
+        }
+        
         void OnEnable()
         {
             director.stopped += OnPlayableDirectorStopped;
