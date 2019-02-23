@@ -7,7 +7,7 @@ namespace DefaultNamespace
     {
         public void OnClickPlay()
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Level1");
         }
     }
 }
