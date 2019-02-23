@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 83222793}
   - component: {fileID: 83222795}
   - component: {fileID: 83222794}
+  - component: {fileID: 83222796}
   m_Layer: 0
   m_Name: control1
   m_TagString: Untagged
@@ -544,6 +545,18 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &83222796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83222788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b147c2734a4d0584924aac0657f2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85203529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1709,7 @@ GameObject:
   - component: {fileID: 1442379132}
   - component: {fileID: 1442379134}
   - component: {fileID: 1442379133}
+  - component: {fileID: 1442379135}
   m_Layer: 0
   m_Name: control3
   m_TagString: Untagged
@@ -1958,6 +1972,18 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1442379135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442379127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b147c2734a4d0584924aac0657f2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1534597021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,6 +2440,7 @@ GameObject:
   - component: {fileID: 1818135899}
   - component: {fileID: 1818135901}
   - component: {fileID: 1818135900}
+  - component: {fileID: 1818135902}
   m_Layer: 0
   m_Name: control2
   m_TagString: Untagged
@@ -2676,6 +2703,18 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1818135902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818135894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b147c2734a4d0584924aac0657f2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1904684114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +3005,7 @@ GameObject:
   - component: {fileID: 2006458119}
   - component: {fileID: 2006458121}
   - component: {fileID: 2006458120}
+  - component: {fileID: 2006458122}
   m_Layer: 0
   m_Name: control4
   m_TagString: Untagged
@@ -3228,6 +3268,18 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &2006458122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006458114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b147c2734a4d0584924aac0657f2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2062680981
 GameObject:
   m_ObjectHideFlags: 0
