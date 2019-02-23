@@ -18,9 +18,6 @@ namespace DefaultNamespace
                 SpringJoint2D sjoint = GetComponent<SpringJoint2D>();
                 sjoint.distance = Vector2.Distance(transform.position, sjoint.connectedBody.transform.position);
             }
-            
-            
-
         }
     }
 }

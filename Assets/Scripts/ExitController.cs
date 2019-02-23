@@ -1,5 +1,6 @@
 ﻿using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public delegate void ExitEvent();
 
@@ -10,12 +11,17 @@ public class ExitController : MonoBehaviour
     [SerializeField] private int partsNeededToWin = 8;
 
     private int partsIn = 0;
-
-    public event ExitEvent OnPlayerExit;
+    private bool finishedInThisScene = false;
 
     void Awake()
     {
-        Game.Me.exitController = this;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        finishedInThisScene = false;
+        partsIn = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,7 +49,11 @@ public class ExitController : MonoBehaviour
 
     private void SendExitEvent()
     {
-        Debug.Log("Player exited");
-        OnPlayerExit?.Invoke();
+        if (!finishedInThisScene)
+        {
+            Debug.Log("Player exited");
+            Game.Me.LevelFinished();
+            this.finishedInThisScene = true;
+        }
     }
 }

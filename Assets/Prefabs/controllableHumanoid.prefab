@@ -47,11 +47,11 @@ GameObject:
   - component: {fileID: 3586623109716222763}
   - component: {fileID: 3586623109716222760}
   - component: {fileID: 3586623109716222757}
-  - component: {fileID: 3586623109716222756}
   - component: {fileID: 3586623109716222758}
   - component: {fileID: 3586623109716222759}
   - component: {fileID: 3586623109716222753}
   - component: {fileID: 3586623109716222752}
+  - component: {fileID: 1711893767}
   m_Layer: 0
   m_Name: control_left_hand
   m_TagString: Untagged
@@ -168,25 +168,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!232 &3586623109716222756
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3586623109716222761}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3586623110225812450}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 1.9853835
-  m_MaxDistanceOnly: 0
 --- !u!120 &3586623109716222758
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -338,6 +319,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cbf0df27b34566b03d10c9590c09ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!231 &1711893767
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586623109716222761}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 3586623110225812450}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 1.7807152
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1 &3586623110112923515
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,11 +351,11 @@ GameObject:
   - component: {fileID: 3586623110112923508}
   - component: {fileID: 3586623110112923509}
   - component: {fileID: 3586623110112923511}
-  - component: {fileID: 3586623110112923510}
   - component: {fileID: 3586623110112923504}
   - component: {fileID: 3586623110112923505}
   - component: {fileID: 3586623110112923507}
   - component: {fileID: 3586623110112923506}
+  - component: {fileID: 764665932}
   m_Layer: 0
   m_Name: control_left_foot
   m_TagString: Untagged
@@ -471,25 +472,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!232 &3586623110112923510
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3586623110112923515}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3586623109007048898}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.06, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2.6071005
-  m_MaxDistanceOnly: 0
 --- !u!120 &3586623110112923504
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -641,6 +623,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cbf0df27b34566b03d10c9590c09ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!231 &764665932
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586623110112923515}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 3586623109007048898}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 2.6221848
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1 &3586623110536387887
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,11 +655,11 @@ GameObject:
   - component: {fileID: 3586623110536387880}
   - component: {fileID: 3586623110536387881}
   - component: {fileID: 3586623110536387883}
-  - component: {fileID: 3586623110536387882}
   - component: {fileID: 3586623110536387876}
   - component: {fileID: 3586623110536387877}
   - component: {fileID: 3586623110536387879}
   - component: {fileID: 3586623110536387878}
+  - component: {fileID: 382858558}
   m_Layer: 0
   m_Name: control_right_hand
   m_TagString: Untagged
@@ -774,25 +776,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!232 &3586623110536387882
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3586623110536387887}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3586623110865638796}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 5.675518
-  m_MaxDistanceOnly: 0
 --- !u!120 &3586623110536387876
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -944,6 +927,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cbf0df27b34566b03d10c9590c09ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!231 &382858558
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586623110536387887}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 3586623110865638796}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 2.8914838
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1 &3586623111041824602
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,11 +959,11 @@ GameObject:
   - component: {fileID: 3586623111041824599}
   - component: {fileID: 3586623111041824596}
   - component: {fileID: 3586623111041824598}
-  - component: {fileID: 3586623111041824593}
   - component: {fileID: 3586623111041824595}
   - component: {fileID: 3586623111041824592}
   - component: {fileID: 3586623111041824594}
   - component: {fileID: 3586623111041824685}
+  - component: {fileID: 239216055}
   m_Layer: 0
   m_Name: control_right_foot
   m_TagString: Untagged
@@ -1077,25 +1080,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!232 &3586623111041824593
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3586623111041824602}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3586623110434352766}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.07, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 3.979706
-  m_MaxDistanceOnly: 0
 --- !u!120 &3586623111041824595
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1247,6 +1231,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cbf0df27b34566b03d10c9590c09ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!231 &239216055
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586623111041824602}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 3586623110434352766}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 4.0626736
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1001 &3307193781510699922
 PrefabInstance:
   m_ObjectHideFlags: 0

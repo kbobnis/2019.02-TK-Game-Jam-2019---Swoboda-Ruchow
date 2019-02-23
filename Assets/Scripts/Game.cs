@@ -7,16 +7,19 @@ namespace DefaultNamespace
     {
         public static Game Me;
 
-        [SerializeField] private Scene[] levels;
-        public ExitController exitController;
+        private int actualLevel;
+        [SerializeField] private string[] levelNames;
 
         void Awake()
         {
             Me = this;
             DontDestroyOnLoad(this.gameObject);
-            
         }
-        
-        
+
+
+        public void LevelFinished()
+        {
+            GetComponentInChildren<EndLevelOutro>().EndLevel(levelNames[++actualLevel]);
+        }
     }
 }
