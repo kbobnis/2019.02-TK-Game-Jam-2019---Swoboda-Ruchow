@@ -12,14 +12,19 @@ namespace DefaultNamespace
 
         void Awake()
         {
-            Me = this;
-            DontDestroyOnLoad(this.gameObject);
-            SceneManager.sceneLoaded += SceneManagerOnSceneLoaded;
+            if (Me != null)
+            {
+                Destroy(this.gameObject);
+            } else
+            {
+                Me = this;
+                DontDestroyOnLoad(this.gameObject);
+                SceneManager.sceneLoaded += SceneManagerOnSceneLoaded;
+            }
         }
 
         private void SceneManagerOnSceneLoaded(Scene sceneName, LoadSceneMode arg1)
         {
-            
         }
 
 

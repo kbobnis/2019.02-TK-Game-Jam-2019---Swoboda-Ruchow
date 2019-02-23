@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Networking.PlayerConnection;
 using UnityEngine.SceneManagement;
 
 namespace DefaultNamespace
@@ -31,8 +30,15 @@ namespace DefaultNamespace
             {
                 playerControllers.Add(controllsMe);
             }
-            playerControllers[0].Activate(true);
-            currentIndex = 0;
+
+            if (foundObjects.Length > 0)
+            {
+                playerControllers[0].Activate(true);
+                currentIndex = 0;
+            } else
+            {
+                currentIndex = -1;
+            }
         }
 
         void Update()
@@ -63,7 +69,6 @@ namespace DefaultNamespace
 
             playerControllers[currentIndex].Activate(true);
 
-            Debug.Log("Changed controller to " + currentIndex);
         }
     }
 }

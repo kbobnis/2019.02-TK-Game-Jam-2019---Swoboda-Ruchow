@@ -51,7 +51,6 @@ public class ExitController : MonoBehaviour
     {
         if (!finishedInThisScene)
         {
-            Debug.Log("Player exited");
             Game.Me.LevelFinished();
             this.finishedInThisScene = true;
         }
