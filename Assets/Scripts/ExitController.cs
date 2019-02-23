@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
 
 public delegate void ExitEvent();
 
@@ -12,6 +13,11 @@ public class ExitController : MonoBehaviour
 
     public event ExitEvent OnPlayerExit;
 
+    void Awake()
+    {
+        Game.Me.exitController = this;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag(PlayerTag))
@@ -23,12 +29,16 @@ public class ExitController : MonoBehaviour
         if (partsIn >= partsNeededToWin)
         {
             SendExitEvent();
+            Destroy(this);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag(PlayerTag)) partsIn--;
+        if (other.CompareTag(PlayerTag))
+        {
+            partsIn--;
+        }
     }
 
     private void SendExitEvent()
