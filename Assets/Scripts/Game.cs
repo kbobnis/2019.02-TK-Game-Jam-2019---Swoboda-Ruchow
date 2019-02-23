@@ -14,6 +14,12 @@ namespace DefaultNamespace
         {
             Me = this;
             DontDestroyOnLoad(this.gameObject);
+            SceneManager.sceneLoaded += SceneManagerOnSceneLoaded;
+        }
+
+        private void SceneManagerOnSceneLoaded(Scene sceneName, LoadSceneMode arg1)
+        {
+            
         }
 
 
