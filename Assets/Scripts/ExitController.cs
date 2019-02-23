@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System.Linq;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,44 +7,50 @@ public delegate void ExitEvent();
 
 public class ExitController : MonoBehaviour
 {
-    private const string PlayerTag = "Player";
+    public const string PlayerTag = "Player";
 
-    [SerializeField] private int partsNeededToWin = 8;
-
-    private int partsIn = 0;
     private bool finishedInThisScene = false;
+    private Part[] parts;
+    private double? counter;
+    [SerializeField]
+    private double counterLimit = 1.0;
 
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void Start()
+    {
+        this.parts = this.transform.GetComponentsInChildren<Part>();
+    }
+
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         finishedInThisScene = false;
-        partsIn = 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        if (!other.CompareTag(PlayerTag))
+        var allPartsCovered = parts.All(p => p.IsCovered);
+
+        if (!allPartsCovered)
         {
+            counter = null;
             return;
         }
 
-        partsIn++;
-        if (partsIn >= partsNeededToWin)
+        if (counter == null)
         {
-            SendExitEvent();
-            Destroy(this);
+            this.counter = counterLimit;
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag(PlayerTag))
+        else
         {
-            partsIn--;
+            this.counter -= Time.deltaTime;
+            if (counter.Value < 0)
+            {
+                SendExitEvent();
+            }
         }
     }
 
@@ -51,7 +58,6 @@ public class ExitController : MonoBehaviour
     {
         if (!finishedInThisScene)
         {
-            Debug.Log("Player exited");
             Game.Me.LevelFinished();
             this.finishedInThisScene = true;
         }
