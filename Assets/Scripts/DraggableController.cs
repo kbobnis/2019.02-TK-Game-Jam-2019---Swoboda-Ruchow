@@ -20,10 +20,13 @@ namespace DefaultNamespace
         private void OnMouseDown()
         {
             screenPoint = mainCamera.WorldToScreenPoint(transform.position);
-            offset = transform.position - mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+            offset = transform.position -
+                     mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
+                         screenPoint.z));
         }
 
-        private void OnMouseDrag(){
+        private void OnMouseDrag()
+        {
             var cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             var cursorPosition = mainCamera.ScreenToWorldPoint(cursorPoint) + offset;
             transform.position = cursorPosition;

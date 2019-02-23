@@ -4,10 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LineView : MonoBehaviour
 {
-    [SerializeField]
-    private Transform[]  points;
+    [SerializeField] private Transform[] points;
     private LineRenderer lineRenderer;
-    private Transform    transform;
+    private Transform transform;
 
     private void Start()
     {
@@ -17,6 +16,6 @@ public class LineView : MonoBehaviour
 
     public void Update()
     {
-        lineRenderer.SetPositions(new [] { transform.position }.Concat(points.Select(t => t.position)).ToArray());
+        lineRenderer.SetPositions(new[] {transform.position}.Concat(points.Select(t => t.position)).ToArray());
     }
 }
