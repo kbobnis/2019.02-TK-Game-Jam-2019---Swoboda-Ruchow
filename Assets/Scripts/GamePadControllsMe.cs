@@ -12,8 +12,8 @@ namespace DefaultNamespace
         public void Move(float lx, float ly)
         {
             Vector3 transformPosition = transform.position;
-            transformPosition.x += lx / 10f;
-            transformPosition.y += -ly / 10f;
+            transformPosition.x += lx / 40f;
+            transformPosition.y += -ly / 40f;
             transform.position = transformPosition;
         }
     }

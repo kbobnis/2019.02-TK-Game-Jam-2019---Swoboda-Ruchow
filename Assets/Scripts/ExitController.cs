@@ -12,7 +12,7 @@ public class ExitController : MonoBehaviour
     private bool finishedInThisScene = false;
     private Part[] parts;
     private float? counter;
-    private float counterLimit = 4.0f;
+    private float counterLimit = 3.0f;
     private SpriteRenderer[] children;
     
 
@@ -56,12 +56,13 @@ public class ExitController : MonoBehaviour
             }
 
             toSetColor = new Color(0 / 255f, counter.Value / (float) counterLimit, 0);
+            foreach (SpriteRenderer componentsInChild in children)
+            {
+                componentsInChild.color = toSetColor;
+            }
         }
         
-        foreach (SpriteRenderer componentsInChild in children)
-        {
-            componentsInChild.color = toSetColor;
-        }
+        
         
     }
 

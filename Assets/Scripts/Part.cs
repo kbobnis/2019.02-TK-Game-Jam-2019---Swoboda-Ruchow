@@ -11,6 +11,7 @@ public class Part : MonoBehaviour
         if (other.CompareTag(ExitController.PlayerTag))
         {
             howMany++;
+            UpdateSprite();
         }
     }
 
@@ -19,6 +20,12 @@ public class Part : MonoBehaviour
         if (other.CompareTag(ExitController.PlayerTag))
         {
             howMany--;
+            UpdateSprite();
         }
+    }
+
+    private void UpdateSprite()
+    {
+        GetComponent<SpriteRenderer>().color = IsCovered ? Color.green : Color.white;
     }
 }
