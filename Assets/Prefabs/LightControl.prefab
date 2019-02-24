@@ -44,8 +44,8 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 10
   m_Range: 25
-  m_SpotAngle: 105
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 75
+  m_InnerSpotAngle: 7
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -135,8 +135,8 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 10
   m_Range: 25
-  m_SpotAngle: 105
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 75
+  m_InnerSpotAngle: 7
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -235,9 +235,9 @@ MonoBehaviour:
   PoliceLights:
   - {fileID: 2009957359052101601}
   - {fileID: 8751376666397806847}
-  BlinkSpeed: 2
+  BlinkSpeed: 30
   BlinkMultiplier: 2
-  BaseBlinkIntensity: 10
+  BaseBlinkIntensity: 15
   PoliceSpeed: 500
 --- !u!1001 &2009957360426635936
 PrefabInstance:

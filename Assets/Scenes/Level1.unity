@@ -236,7 +236,7 @@ MonoBehaviour:
   Size: 6
   HorizontalSpeed: 0
   VerticalSpeed: 0.35
-  Density: 0.1
+  Density: 0.02
   Shader: {fileID: 4800000, guid: fdac6dc07af404deba03f0e8f95edf1f, type: 3}
 --- !u!20 &519420031
 Camera:
