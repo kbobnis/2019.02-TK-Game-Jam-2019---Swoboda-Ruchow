@@ -828,7 +828,7 @@ FixedJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2027672683325760499}
-  m_BreakForce: 8
+  m_BreakForce: 12
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.20690882, y: -0.6484337}
@@ -846,7 +846,7 @@ FixedJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2027672682128991428}
-  m_BreakForce: 8
+  m_BreakForce: 12
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.18, y: -0.63}
@@ -864,7 +864,7 @@ FixedJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2027672682880793720}
-  m_BreakForce: 8
+  m_BreakForce: 10
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.26551318, y: 0.50454867}
@@ -882,7 +882,7 @@ FixedJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2027672681609718577}
-  m_BreakForce: 8
+  m_BreakForce: 10
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.32066238, y: 0.54336715}

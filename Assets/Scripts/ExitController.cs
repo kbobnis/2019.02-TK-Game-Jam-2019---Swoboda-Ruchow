@@ -56,12 +56,13 @@ public class ExitController : MonoBehaviour
             }
 
             toSetColor = new Color(0 / 255f, counter.Value / (float) counterLimit, 0);
+            foreach (SpriteRenderer componentsInChild in children)
+            {
+                componentsInChild.color = toSetColor;
+            }
         }
         
-        foreach (SpriteRenderer componentsInChild in children)
-        {
-            //componentsInChild.color = toSetColor;
-        }
+        
         
     }
 
