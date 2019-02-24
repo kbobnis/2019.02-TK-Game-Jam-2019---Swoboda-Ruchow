@@ -623,10 +623,10 @@ PlayableDirector:
     value: {fileID: 1406263169}
   - key: {fileID: 7969689693054566757, guid: e1d5034a81081ed4d9cd6d1f4c3c2dd3, type: 2}
     value: {fileID: 1093433560}
-  - key: {fileID: -3587055838379407563, guid: e1d5034a81081ed4d9cd6d1f4c3c2dd3, type: 2}
-    value: {fileID: 441200238}
   - key: {fileID: -5370585589589350884, guid: e1d5034a81081ed4d9cd6d1f4c3c2dd3, type: 2}
     value: {fileID: 1417252304}
+  - key: {fileID: 1325884606399781360, guid: e1d5034a81081ed4d9cd6d1f4c3c2dd3, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - fbe18f149c5d95f4182a6cb81e24c3b6: {fileID: 1093433558}
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -831,7 +831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Krzysztof Bobnis i \u0141ukasz Biel prezentuj\u0105"
+  m_Text: 
 --- !u!222 &1417252305
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -11,12 +11,14 @@ public class ExitController : MonoBehaviour
 
     private bool finishedInThisScene = false;
     private Part[] parts;
-    private double? counter;
-    [SerializeField]
-    private double counterLimit = 1.0;
+    private float? counter;
+    private float counterLimit = 4.0f;
+    private SpriteRenderer[] children;
+    
 
     void Awake()
     {
+        children = GetComponentsInChildren<SpriteRenderer>();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -32,26 +34,35 @@ public class ExitController : MonoBehaviour
 
     private void Update()
     {
-        var allPartsCovered = parts.All(p => p.IsCovered);
+        bool allPartsCovered = parts.All(p => p.IsCovered);
 
+        Color toSetColor  = Color.white;
+        
         if (!allPartsCovered)
         {
             counter = null;
-            return;
-        }
-
-        if (counter == null)
+        } else
         {
-            this.counter = counterLimit;
-        }
-        else
-        {
-            this.counter -= Time.deltaTime;
-            if (counter.Value < 0)
+            if (counter == null)
             {
-                SendExitEvent();
+                this.counter = counterLimit;
+            } else
+            {
+                this.counter -= Time.deltaTime;
+                if (counter.Value < 0)
+                {
+                    SendExitEvent();
+                }
             }
+
+            toSetColor = new Color(0 / 255f, counter.Value / (float) counterLimit, 0);
         }
+        
+        foreach (SpriteRenderer componentsInChild in children)
+        {
+            componentsInChild.color = toSetColor;
+        }
+        
     }
 
     private void SendExitEvent()
