@@ -9,6 +9,7 @@ namespace DefaultNamespace
     {
         private List<GamePadControllsMe> playerControllers = new List<GamePadControllsMe>();
         int currentIndex = -1;
+        private GamePadControllsMe current;
 
         void Awake()
         {
@@ -34,41 +35,40 @@ namespace DefaultNamespace
             if (foundObjects.Length > 0)
             {
                 playerControllers[0].Activate(true);
-                currentIndex = 0;
-            } else
-            {
-                currentIndex = -1;
+                current = playerControllers[0];
             }
         }
 
         void Update()
         {
-            if (currentIndex != -1)
+            if (current != null)
             {
                 float LY = GamePad.GetAxis(CAxis.LY);
                 float LX = GamePad.GetAxis(CAxis.LX);
 
-                bool isAPressed = GamePad.GetState().Pressed(CButton.A);
-                if (isAPressed)
+                var s = GamePad.GetState();
+
+                if (s.AnyButton)
                 {
-                    ChangeController();
+                    var f = playerControllers.Find(c => c.controller == s.GetAnyButton());
+                    ChangeController(f);
                 }
 
-                playerControllers[currentIndex].Move(LX, LY);
+//                bool isAPressed = GamePad.GetState().Pressed(CButton.A);
+//                if (isAPressed)
+//                {
+//                    ChangeController();
+//                }
+
+                current.Move(LX, LY);
             }
         }
 
-        private void ChangeController()
+        private void ChangeController(GamePadControllsMe f)
         {
-            playerControllers[currentIndex].Activate(false);
-            currentIndex++;
-            if (currentIndex >= playerControllers.Count)
-            {
-                currentIndex = 0;
-            }
-
-            playerControllers[currentIndex].Activate(true);
-
+            current.Activate(false);
+            f.Activate(true);
+            current = f;
         }
     }
 }

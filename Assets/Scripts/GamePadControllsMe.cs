@@ -4,6 +4,8 @@ namespace DefaultNamespace
 {
     public class GamePadControllsMe : MonoBehaviour
     {
+        public CButton controller;
+
         public void Activate(bool activate)
         {
             GetComponent<SpriteRenderer>().color = activate ? Color.red : Color.white;
