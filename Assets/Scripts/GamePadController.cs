@@ -60,7 +60,7 @@ namespace DefaultNamespace
 //                    ChangeController();
 //                }
 
-                playerControllers[currentIndex].Move(LX, LY);
+                current.Move(LX, LY);
             }
         }
 
