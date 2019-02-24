@@ -12,7 +12,7 @@ public class ExitController : MonoBehaviour
     private bool finishedInThisScene = false;
     private Part[] parts;
     private float? counter;
-    private float counterLimit = 4.0f;
+    private float counterLimit = 3.0f;
     private SpriteRenderer[] children;
     
 
@@ -60,7 +60,7 @@ public class ExitController : MonoBehaviour
         
         foreach (SpriteRenderer componentsInChild in children)
         {
-            componentsInChild.color = toSetColor;
+            //componentsInChild.color = toSetColor;
         }
         
     }
