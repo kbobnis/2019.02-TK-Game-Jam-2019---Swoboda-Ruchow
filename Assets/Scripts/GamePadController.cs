@@ -54,12 +54,6 @@ namespace DefaultNamespace
                     ChangeController(f);
                 }
 
-//                bool isAPressed = GamePad.GetState().Pressed(CButton.A);
-//                if (isAPressed)
-//                {
-//                    ChangeController();
-//                }
-
                 current.Move(LX, LY);
             }
         }
